@@ -8,17 +8,31 @@ Vamos aprender o comando *class(obj)* que tem como objetivo saber a classe do ob
 1. Números
 
 Trata-se dos reais logo, objetos dessas classes são números. Para criar um objeto desse modo faremos: 
+
 x<-3.4
 class(x)
+
 Nesta categoria podemos resolver problemas matemáticos usando operadores como de soma, subtração, divisão e multiplicação.
 
 - Dica: Use sempre o help para tirar suas duvidas. Exemplo: help(numeric)
 
 2. Texto
 
-Temos nesta categoria, vamos criar objetos do tipo caracter. Para definir este tipo de objeto usaremos " ". Vejamos:
+Temos nesta categoria, vamos criar objetos do tipo caracter. Para definir este tipo de objeto usaremos " ". 
+
+Vejamos:
 y <- "Julia"
 class(y)
+
+Caso queira transformar um objeto de outra classe em caracter, podemos usar o comando as.character().
+
+Por exemplo:
+
+c <- as.character(x)
+
+E se eu quiser contatenar vários caracters? Basta usar o comando paste(). Para separar é preciso fazer: paste(...,sep=" ", ...)
+
+3. 
 
 
 
