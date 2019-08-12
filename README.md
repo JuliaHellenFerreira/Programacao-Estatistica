@@ -1,5 +1,5 @@
 # Programaçao Estatistica - UFF
-Professora Jessica
+Professora Jessica - Utilizaremos o R Studio
 
 ## Semana 1 - Objetos e Classes
 
@@ -43,7 +43,12 @@ Para negação faremos !a. Temos também temos operações ==(igual), !=(diferen
 
 4. Array
 
-Podemos definir como uma sequência de objetos de mesma classe e sempre tem tamanho maior ou igual a 1. Sendo assim, temos v = c(1,2,3,4,5,6,7,8,9). Para saber o tamanho usaremos o comando length(). SE for precis encontrar algum objeto dentro de um Array, faremos [] para localizar.
+Podemos definir como uma sequência de objetos de mesma classe e sempre tem tamanho maior ou igual a 1. Sendo assim, temos v = c(1,2,3,4,5,6,7,8,9). Para saber o tamanho usaremos o comando length(). SE for precis encontrar algum objeto dentro de um Array, faremos [ ] para localizar. Vejamos uma coisa interessante, podemos fazer:
+
+vet[12] <- 8 ( ele irá acrescentar está posição).
+
+- Comandos
+FALTA MATRIZ E LISTA
 
 
 
