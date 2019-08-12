@@ -42,7 +42,8 @@ v|f (ou)
 Para negação faremos !a. Temos também temos operações ==(igual), !=(diferente).
 
 4. Array
-Podemos definir como uma sequência de objetos de mesma classe. Sendo assim, temos v = c(1,2,3,4,5,6,7,8,9). Para saber o tamanho usaremos o comando length().
+
+Podemos definir como uma sequência de objetos de mesma classe e sempre tem tamanho maior ou igual a 1. Sendo assim, temos v = c(1,2,3,4,5,6,7,8,9). Para saber o tamanho usaremos o comando length(). SE for precis encontrar algum objeto dentro de um Array, faremos [] para localizar.
 
 
 
