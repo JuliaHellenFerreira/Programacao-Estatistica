@@ -22,6 +22,7 @@ Temos nesta categoria, vamos criar objetos do tipo caracter. Para definir este t
 
 Vejamos:
 y <- "Julia"
+
 class(y)
 
 Caso queira transformar um objeto de outra classe em caracter, podemos usar o comando as.character().
@@ -33,12 +34,15 @@ c <- as.character(x)
 E se eu quiser contatenar vários caracters? Basta usar o comando paste(). Para separar é preciso fazer: paste(...,sep="", ...), neste caso a função sep fará a separação entre cada caracter.
 
 3. Lógicos (logical)
-Irão receber os valores TRUE (T) ou FALSE (F). Para os objetos do tipo logical teremos as seguintes operações (e,ou).
-
-Vejamos:
+Irão receber os valores TRUE (T) ou FALSE (F). Para os objetos do tipo logical teremos as seguintes operações (e,ou), por exemplo.Vejamos:
 
 v&&f (e)
 v|f (ou)
+
+Para negação faremos !a. Temos também temos operações ==(igual), !=(diferente).
+
+4. Array
+Podemos definir como uma sequência de objetos de mesma classe. Sendo assim, temos v = c(1,2,3,4,5,6,7,8,9). Para saber o tamanho usaremos o comando length().
 
 
 
