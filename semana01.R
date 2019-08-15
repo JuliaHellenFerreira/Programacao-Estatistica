@@ -83,4 +83,24 @@ ch4 == ch5
 
 ch4 != ch5
 
+# Exercício 1.3
+
+a <- 18%%5
+a
+b = 15%%5
+b
+c <- 8.3%%3
+c
+
+# Exercício 1.4
+
+a <- 34
+b <- 33
+
+
+if(b%%2 == 0 ){
+  print("Par")
+}else
+  print("Impar")
+
 
