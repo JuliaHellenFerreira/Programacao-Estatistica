@@ -1,5 +1,5 @@
 # Semana 1 - Objetos e Classes
-# Exerc�cio 1.1
+# Exercício 1.1
 
 x<- 0
 y<- -1
@@ -55,4 +55,32 @@ log(b)
 
 (pi)^(1/2)
 exp(-x)
+
+# Exercício 1.2
+
+ch1 <- a
+ch1
+ch2 <- b
+ch2
+ch3 <- c
+ch3
+
+# Letra a 
+
+ch4 <- paste(ch1,ch2,ch3,sep =".")
+ch4
+
+# Letra b
+
+ch5 <- paste(ch1,ch2,ch3)
+ch5
+
+# Letra c
+
+ch4 == ch5
+
+# Letra d
+
+ch4 != ch5
+
 
