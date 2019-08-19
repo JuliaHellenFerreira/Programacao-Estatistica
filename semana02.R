@@ -1,25 +1,27 @@
+
 # Semana 2 - Controle de Fluxo
 
-#Exercício 2.1
+#ExercÃ­cio 2.1
 
-print("Triângulos")
-a <- 2
+print("TriÃ¢ngulos")
+a <- readline("Insira um nÃºmero: ")
 a
-b <- 3
+b <- readline("Insira um nÃºmero: ")
 b
-c <- 4
+c <- readline("Insira um nÃºmero: ")
 c
 
 ## Verificando
-if(a==b==c){
-  print("É um triângulo equilátero!")
-}else if(a!=b!=c){
-  print("É um triângulo escaleno!")
+if (a==b && a==c){
+  print("Ã‰ equilÃ¡tero!")
 }else{
-  print("É um triâgulo isósceles!")
-}
-
-#Exercício 2.2
+  if (a!=b && a!=c && b!=c){
+    print("Ã‰ escaleno!")
+  }else{
+    print("Ã‰ isÃ³sceles")
+  }
+}                                                                                                                                                                               
+#ExercÃ­cio 2.2
 # Letra a
 
 vet <- NULL
@@ -33,3 +35,14 @@ vet
 # Letra b
 
 
+impares = NULL
+i <- 1
+repeat{
+  if (3*i >=100){
+    break
+  }
+  impares[i] <- 3*i
+  i=i+1
+}
+
+impares
