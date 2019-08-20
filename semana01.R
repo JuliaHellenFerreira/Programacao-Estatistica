@@ -186,13 +186,26 @@ b
 
 # Letra a
 
-m <- matrix(c(1,2,3,4,101,102,103,104),nrow = 4,ncol = 2, byrow = F)
+a <- c(1,2,3,4,101,102,103,104)
+m <- matrix(a,nrow = 4,ncol = 2, byrow = F)
 m
 
 # Letra b
 
-m <- matrix(c(1,2,3,4,101,102,103,104),nrow = 2,ncol = 4, byrow = T)
+a <- c(1,2,3,4,101,102,103,104)
+m <- matrix(a,nrow = 2,ncol = 4, byrow = T)
 m
+
+# Letra c
+
+m <- matrix(0, nrow = 3, ncol = 2, byrow = T)
+m
+
+# Letra d
+
+m <- matrix(1, nrow = 3, ncol = 3, byrow = T)
+m
+
 
 
 
