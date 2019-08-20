@@ -77,11 +77,31 @@ v <- numeric()
 
 ### 1.5 Matrizes 
 
+Fazemos o seguinte comando:
+
+m <- matrix(data, nrow = , ncol = , byrow = , dimnames = )
+
+O que foi determinado antes não poderá ser afetado.
+
+nrow () - número de linhas 
+ncol() - número de colunas
+
+### 1.6 Listas
+
+Este objeto guarda uma sequência de objetos e a sua principal diferença para array é que a lista pode guardar objetos de tipos diferentes.
+
+list() - criar uma lista 
+
+Para acessar a posição da lista fazemos:
+
+[[]] - posição 
+
+lenght() - quantidade de objetos.
 
 
-*Exercícios no arquivo SEMANA01*
+*OBS: Exercícios no arquivo SEMANA01*
 
-
+## Semana 02 - Controle de Fluxo
 
 
 
