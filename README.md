@@ -9,7 +9,7 @@ Professora Jessica - Utilizaremos o R Studio
 - matrix;
 - list.
 
-1.1 Numérico
+### 1.1 Numérico
 Vamos usar os seguintes comandos:
 
 class() - saber a classe do objeto.
@@ -24,13 +24,13 @@ exp () - exponencial;
 
 abs() - modulo.
 
-1.2 Texto
+### 1.2 Texto
 
 O comando que mais iremos utilizar é o:
 
 paste() - que irá concatenar objeto character. Ele irá retornar somente este tipo. Se quisermos separar iremos os objetos iremos acrescentar o: sep="" no final.
 
-1.3 Lógico
+### 1.3 Lógico
 
 Estes objetos podem ser TRUE ou FALSE. Vejamos a tabela a seguir:
 
@@ -50,7 +50,7 @@ Temos estes operadoes para esse tipo:
 
 == , != , < , >
 
-1.3 Array
+### 1.4 Array
 
 
 É uma sequência de objetos do mesmo tipo, para isto usaremos o comando:
@@ -75,7 +75,7 @@ Podemos inicia-lo vazio:
 
 v <- numeric()
 
-1.5 Matrizes 
+### 1.5 Matrizes 
 
 
 
