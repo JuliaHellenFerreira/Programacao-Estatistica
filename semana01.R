@@ -1,5 +1,6 @@
 # Semana 1 - Objetos e Classes
-# ExercÃ­cio 1.1
+
+# Exercício 1.1
 
 x<- 0
 y<- -1
@@ -56,7 +57,7 @@ log(b)
 (pi)^(1/2)
 exp(-x)
 
-# ExercÃ­cio 1.2
+# Exercício 1.2
 
 ch1 <- a
 ch1
@@ -83,16 +84,7 @@ ch4 == ch5
 
 ch4 != ch5
 
-# ExercÃ­cio 1.3
-
-a <- 18%%5
-a
-b = 15%%5
-b
-c <- 8.3%%3
-c
-
-# ExercÃ­cio 1.3
+# Exercício 1.3
 # Letra a
 a <- 18%%5
 a
@@ -105,30 +97,30 @@ c
 
 a <- 33
 if (a%%2 ==0){
-  print("Ã‰ par!")
+  print("É par!")
 }else{
-  print("Ã‰ impar!")
+  print("É impar!")
 }
 
 # Letra c 
 
 a <- 3.4
 if(a%%1 != 0){
-  print("Ã‰ nÃ£o Ã© um nÃºmero inteiro!")
+  print("É não é um número inteiro!")
 }else{
-  print("Ã‰ um nÃºmero inteiro")
+  print("É um número inteiro")
 }
 
 # Letra d
 
 a <- -3.4
 if(a%%1 ==0 && a >= 0){
-  print("Ã‰ um nÃºmero natural!")
+  print("É um número natural!")
 }else{
-  print("NÃ£o Ã© um nÃºmero natural!")
+  print("Não é um número natural!")
 }
 
-#ExercÃ­cio 1.4
+#Exercício 1.4
 
 a<-seq(1:10)
 b<-seq(1,20,by=2)
@@ -154,7 +146,7 @@ z
 w <- b>c
 w
 
-# ExercÃ­cio 1.5
+# Exercício 1.5
 # Letra a
 
 a <- letters
@@ -182,7 +174,7 @@ a
 b <- paste(LETTERS,letters)
 b
 
-# ExercÃ­cio 1.6
+# Exercício 1.6
 
 # Letra a
 
@@ -206,6 +198,73 @@ m
 m <- matrix(1, nrow = 3, ncol = 3, byrow = T)
 m
 
+# Exercício 1.7
+
+A <- matrix(c(1,2,3,4,5,6,7,8,9,10,11,12),4,3)
+A
+nrow(A)
+ncol(A)
+dim(A)
+
+# Exercício 1.8 
+
+# Letra A
+
+minha_lista <- list("Julia Hellen", "22 anos", c("1.77m","55Kg"), c("FALSE","TRUE","TRUE"))
+
+minha_lista
+
+# Letra B
+
+minha_lista[1]
+
+# Letra C
+
+minha_lista[2]
+
+# Letra D
+
+minha_lista[[3]][1] 
+
+# Letra E
+
+minha_lista[[3]][2] 
+
+# Letra F
+
+minha_lista[[4]][3]
+
+# Exercício 1.9
+
+# Letra A
+
+lista_2 <- list("Beyoncé", "37 anos", c("1.67m", "62Kg"), c("FALSE","TRUE","TRUE"))
+lista_2
+
+# Letra B
+
+dados_alunos <- list(minha_lista,lista_2)
+dados_alunos
+
+# Letra C
+
+dados_alunos[[1]][[1]]
+
+# Letra D
+
+dados_alunos[[2]][[1]]
+
+# Letra E
+
+dados_alunos[[1]][[2]][1]
+
+# Letra F
+
+dados_alunos[[2]][[4]][1]
 
 
+# Exercício 1.10
 
+obj1 <- list(1,2,3) ## Uma lista com uma sequência de números formando 3 elementos.
+obj2 <- list(c(1,2,3)) ## Uma lista contendo um array como seu único elemento.
+obj3 <- c(1,2,3) ## Uma array.
