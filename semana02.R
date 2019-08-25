@@ -154,16 +154,54 @@ length(L2)
 
 # Letra c
 
+L3 <- list()
+for(i in 1:10){
+  L3[[i]] <- 0
+  for(j in 1:10){
+    L3[[i]][j] <- i*j
+  }
+}
+L3
+length(L3)
+vet
+length(vet)
 
+# Letra d
 
+L4 <- list()
+for(i in 1:10){
+  L4[[i]] <- i
+  for(j in 1:i){
+    L4[[i]][j] <- j*2
+  }
+}
+L4
 
+# Lista e
 
+L5 <- list()
+for(i in 1:10){
+  L5[[i]] <- 0
+  m5 <- matrix(0, nrow = i, ncol = i)
+  for(j in 1:i){
+    m5[j,j] <- 1
+    L5[[i]] <- m5
+  }
+}
+L5
+m5
 
+# Exercício 2.6
 
+# Letra a
 
+s <- 0
+for(i in 1:10){
+  s <- s + L1[[i]]
+}
 
+s
 
-
-
+# Letra b
 
 
