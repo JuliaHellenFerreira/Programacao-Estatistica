@@ -1,48 +1,169 @@
-
 # Semana 2 - Controle de Fluxo
 
-#Exerc√≠cio 2.1
+#ExercÌcio 2.1
 
-print("Tri√¢ngulos")
-a <- readline("Insira um n√∫mero: ")
+print("Tri‚ngulos")
+a <- 2
 a
-b <- readline("Insira um n√∫mero: ")
+b <- 3
 b
-c <- readline("Insira um n√∫mero: ")
+c <- 4
 c
 
 ## Verificando
-if (a==b && a==c){
-  print("√â equil√°tero!")
+if(a==b==c){
+  print("… um tri‚ngulo equil·tero!")
+}else if(a!=b!=c){
+  print("… um tri‚ngulo escaleno!")
 }else{
-  if (a!=b && a!=c && b!=c){
-    print("√â escaleno!")
-  }else{
-    print("√â is√≥sceles")
-  }
-}                                                                                                                                                                               
-#Exerc√≠cio 2.2
+  print("… um tri‚gulo isÛsceles!")
+}
+
+#ExercÌcio 2.2
+
 # Letra a
 
 vet <- NULL
 i <- 1
-while (length(vet)<=100){
+while (length(vet)<100){
   vet[i] <- i*3
-  i=i+1
+  i <- i+1
 }
 vet
+length(vet)
 
 # Letra b
 
-
-impares = NULL
-i <- 1
+multiplo_3 <-  NULL
+i <-  1
 repeat{
-  if (3*i >=100){
+  if(3*i >= 100)
     break
-  }
-  impares[i] <- 3*i
-  i=i+1
+  multiplo_3[i] <- 3*i
+  i <- i+1
 }
+multiplo_3
+length(multiplo_3)
 
+# Letra c #### D˙vida ####
+
+impares <- NULL
+i <- 1
+while (length(impares)<100){
+  if(i%%2 !=0)
+  impares[i] <- i
+  i <- i+1
+}
 impares
+
+# ExercÌcio 2.3
+
+# Letra a
+
+M <- matrix(0, nrow = 10, ncol = 10)
+M
+
+# Letra a
+m1 <- NULL
+M1 <- matrix(0, nrow = 10, ncol = 10)
+M1
+for(i in 1:10){
+  M1[1,i] <- 1
+}
+M1
+
+# Letra b
+
+M2 <- matrix(0, nrow = 10, ncol = 10)
+M2
+for (i in 1:10){
+  for(j in 1:10){
+  M2[i,j] <- i
+  }
+}
+M2
+
+# Letra c
+
+M3 <- matrix(0, nrow = 100, ncol = 100)
+M3
+for(i in 1:100){
+  for(j in 1:100){
+    M3[i,j] <- j 
+  }
+}
+M3
+
+# Letra d
+
+M4 <- matrix(0, nrow = 100, ncol = 100)
+M4
+for(i in 1:100){
+  for(j in 1:100){
+    if(i%%2 == 0)
+      M4[i,j] <- 2
+    else
+    M4[i,j] <- 1
+}}
+M4
+
+# ExercÌcio 2.4
+
+matriz <- matrix(0, nrow = 100, ncol = 100)
+matriz
+
+# Letra a
+
+for(i in 1:100){
+    matriz[i,i] <- i
+}
+matriz
+
+# Letra b
+
+for(i in 1:100){
+  matriz[i,i] <- 100-i+1
+}
+matriz
+
+# ExercÌcio 2.5
+
+# Letra a
+
+L1 <- list()
+i <- 1
+while(length(L1)<10){
+  L1[i] <- 1
+  i <- i+1
+}
+L1
+length(L1)
+
+# Letra b
+
+L2 <- list()
+vet <- NULL
+i <- 1
+while(length(L2)<10){
+  vet[i] <- 1
+  L2[[i]] <- vet
+  i <- i+1
+}
+L2
+length(L2)
+
+# Letra c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
