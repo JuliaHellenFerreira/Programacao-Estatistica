@@ -322,3 +322,15 @@ for(i in 3: 100000){
   cont <- cont + 1
 }
 cont
+
+# Letra c
+
+cont <- 2
+f <- c(1,1)
+for(i in 3: 1000000){
+  f[i] <- f[i - 1] + f[i-2]
+  if(f[i] <= 1000000){
+    cont <- cont + 1
+  }
+}
+cont
