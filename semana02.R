@@ -295,3 +295,8 @@ x
 
 # Letra a
 
+f <- c(1,1)
+for(i in 3: 12){
+  f[i] <- f[i - 1] + f[i-2]
+}
+f
