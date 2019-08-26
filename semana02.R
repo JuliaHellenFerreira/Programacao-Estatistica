@@ -204,4 +204,25 @@ s
 
 # Letra b
 
+vet <- 0
+for (i in 1:10){
+  for(j in 1:10)
+  vet <- vet + L3[[i]][j]
+}
+vet
 
+# Exercício 2.7
+
+# Letra a
+
+vet <- NULL
+for(i in 1:10){
+  soma <- 0
+  for(j in 1:length(L4[[i]])){
+    soma <- soma + L4[[i]][j]
+  }
+  vet[i] <- soma
+}
+vet
+
+# Letra b
