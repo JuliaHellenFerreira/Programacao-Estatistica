@@ -279,3 +279,19 @@ for(i in 2:100){
 }
 contador
 
+# Letra f
+
+x <- 2
+for(i in 2:100){
+  if(y[i] %% 2 != 0){
+    x[i] <- 0
+    }else{
+      x[i] <- y[i]
+    }
+}
+x
+
+# Exercício 2.9
+
+# Letra a
+
