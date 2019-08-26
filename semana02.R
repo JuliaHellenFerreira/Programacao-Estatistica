@@ -1,8 +1,8 @@
 # Semana 2 - Controle de Fluxo
 
-#ExercÌcio 2.1
+#Exerc√≠cio 2.1
 
-print("Tri‚ngulos")
+print("Tri√¢ngulos")
 a <- 2
 a
 b <- 3
@@ -12,14 +12,14 @@ c
 
 ## Verificando
 if(a==b==c){
-  print("… um tri‚ngulo equil·tero!")
+  print("√â um tri√¢ngulo equil√°tero!")
 }else if(a!=b!=c){
-  print("… um tri‚ngulo escaleno!")
+  print("√â um tri√¢ngulo escaleno!")
 }else{
-  print("… um tri‚gulo isÛsceles!")
+  print("√â um tri√¢gulo is√≥sceles!")
 }
 
-#ExercÌcio 2.2
+#Exerc√≠cio 2.2
 
 # Letra a
 
@@ -45,7 +45,7 @@ repeat{
 multiplo_3
 length(multiplo_3)
 
-# Letra c #### D˙vida ####
+# Letra c #### D√∫vida ####
 
 impares <- NULL
 i <- 1
@@ -56,7 +56,7 @@ while (length(impares)<100){
 }
 impares
 
-# ExercÌcio 2.3
+# Exerc√≠cio 2.3
 
 # Letra a
 
@@ -107,7 +107,7 @@ for(i in 1:100){
 }}
 M4
 
-# ExercÌcio 2.4
+# Exerc√≠cio 2.4
 
 matriz <- matrix(0, nrow = 100, ncol = 100)
 matriz
@@ -126,7 +126,7 @@ for(i in 1:100){
 }
 matriz
 
-# ExercÌcio 2.5
+# Exerc√≠cio 2.5
 
 # Letra a
 
@@ -191,7 +191,7 @@ for(i in 1:10){
 L5
 m5
 
-# ExercÌcio 2.6
+# Exerc√≠cio 2.6
 
 # Letra a
 
@@ -211,7 +211,7 @@ for (i in 1:10){
 }
 vet
 
-# ExercÌcio 2.7
+# Exerc√≠cio 2.7
 
 # Letra a
 
@@ -225,4 +225,57 @@ for(i in 1:10){
 }
 vet
 
+################################################### FALTA #######################################################################
+
+
+# Exerc√≠cio 2.8
+
+# Letra a
+
+r <- 3
+y <- 2
+x <- 2
+for(i in 2:100){
+  y[i] <- x + (i - 1)*r
+}
+y
+length(y)
+
 # Letra b
+
+for(i in 2:35){
+  soma <- 0
+  soma <- soma + y[i]
+}
+soma
+
+# Letra c
+
+contador <- 0
+for(i in 2:100){
+  if(y[i] %% 4 == 0){
+    contador <- contador + 1
+  }
+}
+contador
+
+# Letra d
+
+contador <- 0
+for(i in 2:100){
+  if(y[i] %% 4 == 0 && y[i] %% 5 == 0){
+    contador <- contador + 1
+  }
+}
+contador
+
+# Letra e
+
+contador <- 0
+for(i in 2:100){
+  if(y[i] %% 4 == 0 || y[i] %% 5 == 0){
+    contador <- contador + 1
+  }
+}
+contador
+
