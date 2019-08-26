@@ -300,3 +300,25 @@ for(i in 3: 12){
   f[i] <- f[i - 1] + f[i-2]
 }
 f
+
+# Letra b
+
+f <- c(1,1)
+i <- 3
+repeat{
+  if(f[i-1] + f[i-2]>300){
+    break
+  }
+  f[i] <- f[i-1] + f[i-2]
+  i <- i+1
+  }
+f
+length(f)
+
+cont <- 0
+f <- c(1,1)
+for(i in 3: 100000){
+  f[i] <- f[i - 1] + f[i-2]
+  cont <- cont + 1
+}
+cont
