@@ -225,8 +225,40 @@ for(i in 1:10){
 }
 vet
 
-################################################### FALTA #######################################################################
+# Letra b
 
+vet <- NULL
+vet <- character()
+for(i in 1:length(L4[[i]])){
+  soma <- 0
+  for(j in 1:length(L4[[i]]))
+    soma <- soma + L4[[i]][j]
+  if(soma %% 5 == 0){
+  vet[i] <- paste(soma,"É multiplo de 5")
+  }else{
+    vet[i] <- paste(soma,"Não é multiplo de 5")
+  }
+}
+vet
+
+# Letra c
+
+contador <- 0
+vet <- NULL
+vet <- character()
+for(i in 1:length(L4[[i]])){
+  soma <- 0
+  for(j in 1:length(L4[[i]]))
+    soma <- soma + L4[[i]][j]
+  if(soma %% 5 == 0){
+    vet[i] <- paste(soma,"É multiplo de 5")
+    contador <- contador + 1
+  }else{
+    vet[i] <- paste(soma,"Não é multiplo de 5")
+  }
+}
+vet
+contador
 
 # Exercício 2.8
 
