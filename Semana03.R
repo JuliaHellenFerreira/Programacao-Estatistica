@@ -50,6 +50,8 @@ triangulo(2,3,3)
 
 # Exercício 3.3
 
+# Letra a
+
 reais <- function(vet){
   pos <- NULL
   for(i in 1: length(vet)){
@@ -59,5 +61,35 @@ reais <- function(vet){
   return(length(pos))
 }
 reais(c(2,-3,4))
+
+# Letra b
+
+nreais <- function(vet1, a){
+  menores <- NULL
+  for(i in 1:length(vet1)){
+    if(vet1[i] < a){
+      menores <- c(menores,vet1[i])
+    }
+  }
+  return(length(menores))
+}
+nreais(c(1,2,3,4,5,6,7),4)
+
+# EWxercício 3.4
+
+# Letra a
+
+multiplo <- function(m,n){
+  mul <- NULL
+  for( i in 1: n){
+    mul[i] <- m*i
+  }
+  return(mul)
+}
+multiplo(2,35)
+
+
+
+
 
 
