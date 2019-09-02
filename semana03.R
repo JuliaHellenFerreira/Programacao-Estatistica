@@ -209,6 +209,31 @@ vet <- function(vet,n){
 }
 vet(c(2,4,6,8,10),5)
 
+# Exercício 3.7
 
+# Letra a
+
+pa <- function(x){
+  r <- 3
+  y <- 2
+  for(i in 2:10){
+  y[i] <- x + (i - 1) * r
+  }
+  return(y)
+}
+pa(2)
+
+# Letra b
+
+pa <- function(x,r){
+  y <- 2
+  for(i in 2:10){
+    y[i] <- x + (i - 1) * r
+  }
+  return(y)
+}
+pa(2,3)
+
+# Letra c
 
 
