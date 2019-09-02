@@ -183,7 +183,31 @@ vet <- function(vet,n){
 }
 vet(c(2,4,6,8,10),5)
 
+# Letra b
 
+vet <- function(vet,n){
+  m <- matrix(0, nrow = n, ncol = n, byrow = T)
+  for(i in 1:n){
+    for (j in 1:n){
+      m[i,j] <- vet[i]
+    }
+  }
+  return(m)
+}
+vet(c(2,4,6,8,10),5)
+
+# Letra c
+
+vet <- function(vet,n){
+  m <- matrix(0, nrow = n, ncol = n, byrow = T)
+  for(i in 1:n){
+    for (j in 1:n){
+      m[j,i] <- vet[i]
+    }
+  }
+  return(m)
+}
+vet(c(2,4,6,8,10),5)
 
 
 
