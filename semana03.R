@@ -237,3 +237,12 @@ pa(2,3)
 # Letra c
 
 
+pa2 <- function(x,r,n){
+  y <- 2
+  for (i in 1:n) {
+    y[i] <- x + (i - 1)*r
+    soma <- y[i]
+  }
+  return(y)
+}
+pa2(2,3,10)
