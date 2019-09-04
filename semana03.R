@@ -246,3 +246,50 @@ pa2 <- function(x,r,n){
   return(y)
 }
 pa2(2,3,10)
+
+# Letra d
+
+soma <- function(x,r,n,p){
+  y <- pa2(x,r,n)
+  m <- 0
+  for(i in 1:p){
+    m <- m + y[i]
+  }
+  return(m)
+}
+soma(2,3,10,10)
+
+# Letra e
+
+### Todas foram inicializadas dentro da função
+### logo, todas são locais.
+
+# Exercício 3.8
+
+# Letra a
+
+fib <- function(n){
+  f <- c(1,1)
+  for(i in 3: n){
+    f[i] <- f[i - 1] + f[i-2]
+  }
+  return(f)
+}
+fib(12)
+
+# Letra b
+
+fibk <- function(k){
+  f <- c(1,1)
+  i <- 3
+  repeat{
+    f[i] <- f[i - 1] + f[i-2]
+    i <-  i + 1
+    if( k < f[i - 1] + f[i-2]){
+      break
+    }
+  }
+  return(f)
+}
+fibk(20)
+
