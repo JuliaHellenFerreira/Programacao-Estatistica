@@ -1,269 +1,3 @@
-# Exercício 3.1
-
-# Letra a
-
-menor <- function(a,b){
-  if(a < b){
-    print(paste(a, "é menor que b"))
-    return(a)
-  }else{
-    print(paste(b,"é menor que a"))
-    return(b)
-  }
-}
-
-menor(-100,100)
-
-# Letra b
-
-menor1 <- function(a,b,c){
-  if(a < b && a < c){
-    print(paste(a, "é menor que b e c"))
-    return(a)
-  }else{
-    if(b < a && b < c){
-      print(paste(b,"é menor que a e c"))
-      return(b)
-    }else{
-      print(paste(c, "é menor que b e c"))
-      return(c)
-    }
-  }
-}
-
-menor1(7,100,3)
-
-
-# Exercício 3.2
-
-triangulo <- function(a,b,c){
-  if(a == b && a == c){
-    print("É um triangulo equilatero")
-  }else
-    if(a != b && c != b){
-      print("É um triangulo escaleno")
-    }else{
-      print("É um triangulo isosceles")
-    }
-}
-triangulo(2,3,3)
-
-# Exercício 3.3
-
-# Letra a
-
-reais <- function(vet){
-  pos <- NULL
-  for(i in 1: length(vet)){
-    if(vet[i] > 0){
-      pos<- c(pos,vet[i])
-    }   }
-  return(length(pos))
-}
-reais(c(2,-3,4))
-
-# Letra b
-
-nreais <- function(vet1, a){
-  menores <- NULL
-  for(i in 1:length(vet1)){
-    if(vet1[i] < a){
-      menores <- c(menores,vet1[i])
-    }
-  }
-  return(length(menores))
-}
-nreais(c(1,2,3,4,5,6,7),4)
-
-# Exercício 3.4
-
-# Letra a
-
-multiplo <- function(n,m){
-  mul <- NULL
-  for( i in 1: n){
-    mul[i] <- m*i
-  }
-  return(mul)
-}
-multiplo(2,35)
-
-# Letra b
-
-multiplo1 <- function(m,k){
-  mul1 <- NULL
-  i <- 1
-  repeat{
-    mul1[i] <- m * i
-    i <- i + 1
-    if (m * i > k){
-      break
-    }
-  }
-  return(mul1)
-}
-multiplo1(2,31)
-
-# Letra c
-
-multiplo2 <- function(m,k){
-  mul2 <- NULL
-  i <- 1
-  cont <- 0 
-  repeat{
-    mul2[i] <- m * i
-    i <- i + 1
-    cont <- cont + 1
-    if (m * i > k){
-      break
-    }
-  }
-  return(cont)
-}
-multiplo2(3,10)
-
-# Letra f
-
-# Todas as variavéis são locais
-
-# Exercício 5
-
-# Letra a
-
-mat <- function(n){
-  m <- matrix(0, nrow = n, ncol = n, byrow = T)
-  for(i in 1:n){
-    if(i %% 2 == 0){
-      m[i,] <- 2
-    }else
-      m[i,] <- 1
-    }
-  return(m)
-}
-mat(5)
-
-# Letra b
-
-mat2 <- function(n){
-  m2 <- matrix(0, nrow = n, ncol = n, byrow = T)
-  for (i in 1:n) {
-    for(j in 1:n){
-      m2[,j] <- j
-    }
-  }
-  return(m2)
-}
-mat2(5)
-
-# Letra c
-
-mat1 <- function(n){
-  m2 <- matrix(0, nrow = n, ncol = n, byrow = T)
-  for (i in 1:n) {
-    for(j in 1:n){
-      m2[i,i] <- i
-    }
-  }
-  return(m2)
-}
-mat1(5)
-
-# Exercício 3.6
-
-# Letra a
-
-vet <- function(vet,n){
-  m <- matrix(0, nrow = n, ncol = n, byrow = T)
-  for(i in 1:n){
-    for (j in 1:n){
-      m[i,i] <- vet[i]
-    }
-  }
-  return(m)
-}
-vet(c(2,4,6,8,10),5)
-
-# Letra b
-
-vet <- function(vet,n){
-  m <- matrix(0, nrow = n, ncol = n, byrow = T)
-  for(i in 1:n){
-    for (j in 1:n){
-      m[i,j] <- vet[i]
-    }
-  }
-  return(m)
-}
-vet(c(2,4,6,8,10),5)
-
-# Letra c
-
-vet <- function(vet,n){
-  m <- matrix(0, nrow = n, ncol = n, byrow = T)
-  for(i in 1:n){
-    for (j in 1:n){
-      m[j,i] <- vet[i]
-    }
-  }
-  return(m)
-}
-vet(c(2,4,6,8,10),5)
-
-# Exercício 3.7
-
-# Letra a
-
-pa <- function(x){
-  r <- 3
-  y <- 2
-  for(i in 2:10){
-  y[i] <- x + (i - 1) * r
-  }
-  return(y)
-}
-pa(2)
-
-# Letra b
-
-pa <- function(x,r){
-  y <- 2
-  for(i in 2:10){
-    y[i] <- x + (i - 1) * r
-  }
-  return(y)
-}
-pa(2,3)
-
-# Letra c
-
-
-pa2 <- function(x,r,n){
-  y <- 2
-  for (i in 1:n) {
-    y[i] <- x + (i - 1)*r
-    soma <- y[i]
-  }
-  return(y)
-}
-pa2(2,3,10)
-
-# Letra d
-
-soma <- function(x,r,n,p){
-  y <- pa2(x,r,n)
-  m <- 0
-  for(i in 1:p){
-    m <- m + y[i]
-  }
-  return(m)
-}
-soma(2,3,10,10)
-
-# Letra e
-
-### Todas foram inicializadas dentro da função
-### logo, todas são locais.
-
 # Exercício 3.8
 
 # Letra a
@@ -291,5 +25,83 @@ fibk <- function(k){
   }
   return(f)
 }
-fibk(20)
+fibk(100)
 
+# Letra c
+
+fibk1 <- function(k){
+  cont1 <- 2
+  f <- c(1,1)
+  i <- 3
+  repeat{
+    f[i] <- f[i - 1] + f[i-2]
+    i <-  i + 1
+    cont1 <- cont1 + 1
+    if( k < f[i - 1] + f[i-2]){
+      break
+    }
+  }
+  return(cont1)
+}
+fibk1(100)
+
+# Exercício 3.9
+
+# Letra a
+
+## O valor que será devolvido é (1,2,3,0,0)
+
+# Letra b 
+
+## Dentro da função faremos vet <- NULL
+
+# Exercício 3.10
+
+# Letra a
+
+pg <- function(x0,q,n){
+  sn <- (x0*(q^n - 1))/ (q-1)
+return(sn)
+}
+pg(1,2,3)
+
+# Letra b 
+
+pg2 <- function(x0,q,m){
+  sn <- (x0*(q^m - 1))/ (q-1)
+  soma <- soma + sn[i]
+  return(soma)
+}
+pg2(1,2,10)
+
+# Letra c
+
+pg3 <- function(x0,q,m){
+  sn <- (x0*(q^m - 1))/ (q-1)
+  soma <- soma + sn[i]
+  return(soma)
+}
+pg3(1/2,1/2,10)
+
+# Letra d
+
+pg4 <- function(x0,q,m){
+  sn <- (x0*(q^m - 1))/ (q-1)
+  soma <- soma + sn[i]
+  return(soma)
+}
+pg4(1/2,1/2,30)
+
+# Letra f
+
+## Sim, converge para 1
+
+# Letra f
+
+pg3 <- function(x0,q,m){
+  sn <- (x0*(q^m - 1))/ (q-1)
+  soma <- soma + sn[i]
+  return(soma)
+}
+pg3(1/2,1/2,30)
+options(digits=22)
