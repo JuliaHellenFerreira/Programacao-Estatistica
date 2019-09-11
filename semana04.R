@@ -98,4 +98,7 @@ mediana(c(1,2,3,4,5,6))
 
 # Letra a 
 
-
+quartil <- function(v){
+  m <- mediana(v)
+  n <- length(v)
+}
