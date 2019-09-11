@@ -83,14 +83,13 @@ media <- function(v){
 media(c(1,2,3,4))
 
 # Exercício 4.4 
-
 mediana <- function(v){
   v1 <- sort(v)
   n <- length(v1)
   if(n %% 2 == 0){
-    return((v1[i]*(n/2) + v1[i]*(n/2)+1)/2)
+    return(v1[n/2] + v1[(n/2) + 1])
   }else
-    return((v1[i]*(n + 1)/2))
+    return(v1[(n + 1)/2])
 }
 mediana(c(1,2,3,4,5,6))
 
@@ -100,5 +99,20 @@ mediana(c(1,2,3,4,5,6))
 
 quartil <- function(v){
   m <- mediana(v)
+  v <- sort(v)
   n <- length(v)
+  if( n %% 2 != 0){
+    k <- ((n + 1) / 2) - 1
+    s <- ((n + 1) / 2) -1
+  }else{
+    k <- n / 2
+    s <- (n / 2) + 1
+  }
+  w <- v[1 : k]
+  u <- v[s : n]
+  q1 <- mediana(w)
+  q3 <- mediana(u)
+  return(c(q1, m, q3))
 }
+quartil(c(1,2,3,4,5,6))
+
