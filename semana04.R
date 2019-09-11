@@ -116,3 +116,28 @@ quartil <- function(v){
 }
 quartil(c(1,2,3,4,5,6))
 
+# Letra b ## Caderno
+
+# Letra c
+
+met2 <- function(v){
+  n <- length(v)
+  v <- sort(v)
+  if( n %% 2 == 0){
+    k <- n /2 
+    j <- k + 1
+  }else{
+    k <- (n - 1) / 2 
+    j <- k + 2
+  }
+  v1 <- v[1 : k]
+  v2 <- v[j : n]
+  q1 <- mediana(v1)
+  q2 <- mediana(v)
+  q3 <- mediana(v2)
+return(c(q1,q2,q3))
+}
+
+met2(c(1,2,3,4,5,6))
+
+
