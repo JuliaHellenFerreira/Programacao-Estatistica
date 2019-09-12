@@ -140,4 +140,28 @@ return(c(q1,q2,q3))
 
 met2(c(1,2,3,4,5,6))
 
+# Exercício 4.6
 
+# Letra a ## Não está funcionando ##
+
+frequencia <- function(v){
+  valores <- v[1]
+  freq <- 1
+  n <- length(v)
+  for(i in 2 : n){
+    pertence <- F
+    m <- length(valores)
+    for(i in 1: m){
+      if( valores[i] == v[i]){
+        freq[i] <- freq[j] + 1
+        pertence <- T
+      }
+      if( pertence == F){
+        valores <- c(valores, v[i])
+        freq <- c(freq, 1)
+      }
+      }
+      }
+  }
+  return(valores)
+}
