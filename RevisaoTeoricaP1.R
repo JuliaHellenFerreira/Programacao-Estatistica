@@ -107,16 +107,18 @@ M <- matrix(c(1,2,3,4,5,6), nrow = 3, ncol = 2, byrow = TRUE)
 M
 soma_elem3(M)
 
-# Letra b #### Sem fazer
+# Letra b 
+
+elem_pert(c(1,2,3),5)
 
 elem_pert = function(v,a){
+  soma=0
   n = length(v)
   for(i in 1:n){
-    if(a == v[i]){
-      return(TRUE) 
-    else
-        return(FALSE)} 
-      
+    if(a==v[i]){ 
+      soma=soma+1
     }
-  }}
+  }
+  return(soma>=1)}
+
 
