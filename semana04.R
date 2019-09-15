@@ -255,3 +255,72 @@ distinter <- function(v){
 }
 
 distinter(c(1,2,3,4,5,6))
+
+# Exercício 4.10
+
+media1 <-function(v){
+  n <- length(v)
+  soma <- 0
+  for(i in 1: n ){
+    soma <- soma + v[i]
+  }
+  return(soma / n)
+}
+
+media1(c(1,2,3,4,5))
+
+varamostral <- function(v){
+  s2 <- NULL
+  n <- length(v)
+  m <- media1(v)
+  soma <- 0
+  for(i in 1: n){
+    soma <- soma + (v[i] - m)^2
+  }
+  s2 <- soma / (n - 1)
+  return(s2)
+}
+
+varamostral(c(1,2,3,4,5))
+
+# Exercício 4.11
+
+# Letra a ## No caderno ##
+
+# Letra b 
+
+desmedio <- function(v){
+  v <- sort(v)
+  n <- length(v)
+  m <- media1(v)
+  soma <- 0
+  for(i in 1: n){
+    soma <- soma + abs(v[i] - m)
+  }
+  return(soma / n)
+}
+
+desmedio(c(1,2,3,4,5))
+
+# Exercício 4.12
+
+covamostral <- function(v1,v2){
+  n1 <- length(v1)
+  n2 <- length(v2)
+  m1 <- media1(v1)
+  m2 <- media1(v2)
+  soma <- 0
+  if(n1 == n2){
+  for(i in 1: n1){
+    soma <- soma + (v1[i] - m1) * (v2[i] - m2)
+  }
+    return(soma / (n1 -1))
+  }else{
+    print("Os arrays tem tamanho diferentes não é possível calcular")
+  }
+}
+vet1 <- c(5,8,9)
+vet2 <- c(4,3,6)
+covamostral(vet1,vet2)
+
+var(vet1, vet2)
