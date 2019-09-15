@@ -1,4 +1,4 @@
-# Semana: Algoritmos para Cálculos Estatísticos
+# Semana 04: Algoritmos para Cálculos Estatísticos
 
 # Exercício 4.1
 
@@ -116,7 +116,7 @@ quartil <- function(v){
 }
 quartil(c(1,2,3,4,5,6))
 
-# Letra b ## Caderno
+# Letra b ## Caderno ##
 
 # Letra c
 
@@ -316,7 +316,7 @@ covamostral <- function(v1,v2){
   }
     return(soma / (n1 -1))
   }else{
-    print("Os arrays tem tamanho diferentes não é possível calcular")
+    stop("Os arrays tem tamanho diferentes não é possível calcular")
   }
 }
 vet1 <- c(5,8,9)
