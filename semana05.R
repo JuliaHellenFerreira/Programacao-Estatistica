@@ -86,7 +86,7 @@ ort(v,u)
 
 ## Forma 2
 
-prod_int <- function(v,w){
+prod_int2 <- function(v,w){
   n <-  length(v)
   prod_i <- 0
   if( length(v) == length(w)){
@@ -100,7 +100,7 @@ prod_int <- function(v,w){
 }
 v <- c(0,0,0,0)
 u <- c(1,2,3,4)
-prod_int(v,u)
+prod_int2(v,u)
 
 # Exercício 5.6#
 
@@ -183,8 +183,70 @@ A <- matrix(c(1,2,3,4), nrow = 2, ncol = 2, byrow = T)
 A
 transp(A)
 
+# Exercício 5.10
 
+# Letra a ## No caderno ##
 
+# Letra b #### Tá errado ####
 
+simet <- function(A){
+  n <- nrow(A)
+  m <- ncol(A)
+  for(i in 1:n){
+    for(j in 1:m){
+      if(A[i,j] != A[j,i])
+        return(F)
+      }
+  }
+  return(T)
+}
+A <- matrix(c(1,2,3,4), nrow = 2, ncol = 2, byrow = T)
+A
+simet(A)
+
+# Exercício 5.11
+
+matvet <- function(M,v){
+  n <- nrow(M)
+  m <- ncol(M)
+  k <- length(v)
+  if(k != m){
+    stop("ERRO")
+  }else{
+    w <- NULL
+    for(i in 1: n){
+      w[i] <- prod_int(M[i,],v)
+    }
+  }
+  return(w)
+}
+A <- matrix(c(1,2,3,4), nrow = 2, ncol = 2, byrow = T)
+v <- c(1,2)
+matvet(A,v)
+
+# Exercício 5.12
+
+mm <- function(A,B){
+  n <- nrow(A)
+  m <- ncol(A)
+  l <- nrow(B)
+  k <- ncol(B)
+  if(m != k){
+    stop("ERRO")
+  }else{
+    M <- matrix(0, nrow = n, ncol = k)
+    for(i in 1: n){
+      for(j in 1: k){
+        M[i,j] <- prod_int(A[i,],B[,j])
+      }
+    }
+  }
+  return(M)
+}
+A <- matrix(c(1,2,3,4), nrow = 2, ncol = 2, byrow = T)
+A
+B <- matrix(c(1,2,3,4), nrow = 2, ncol = 2, byrow = T)
+B
+mm(A,B)
 
 
