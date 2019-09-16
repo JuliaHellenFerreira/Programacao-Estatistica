@@ -49,7 +49,7 @@ subvets <- function(v,u){
   }
   return(w)
 }
-v <- c(2,4,6,8)
+v <- c(2,4,6)
 u <- c(1,2,3,4)
 subvets(v,u)
 
@@ -248,5 +248,36 @@ A
 B <- matrix(c(1,2,3,4), nrow = 2, ncol = 2, byrow = T)
 B
 mm(A,B)
+
+# Exercício 5.13 
+
+alfa <- 4
+beta <- -3
+v1 <- c(2,-3,-1, 5,0,-2)
+v2 <- c(3,4,-1,0,1,1)
+v3 <- c(1,2,3,4,5)
+v4 <- c(0,1,1)
+M1 <- matrix(c(1,3,2,-1,0,1), nrow = 2, ncol = 3, byrow = T)
+M1
+M2 <- matrix(c(0,-5,3,-1,1,-1,1,4,0), nrow = 3, ncol = 3, byrow = T)
+M2
+M3 <- matrix(c(3,1,-2,10,3,-1), nrow = 3, ncol = 2, byrow = T)
+M3
+M4 <- matrix(c(1,1,0,1),nrow = 2, ncol = 2, byrow = T)
+M4
+M5 <- matrix(c(3,1,0,1,1,1,3,2,0,3,-5,0,1,2,0,0), nrow = 4, ncol = 4, byrow = T)
+M5
+
+# Letra a
+
+mv(v3,alfa)
+
+# Letra b
+
+somavets(v1,v2)
+
+# Letra c ## Está aparecendo o NULL ##
+
+subvets(v3,v1)
 
 
