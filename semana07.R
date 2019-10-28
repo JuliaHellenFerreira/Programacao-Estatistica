@@ -120,27 +120,33 @@ multiplicacao1(2,3)
 # Exercício 7.8
 
 nulos <- function(v){
-  cont <- NULL
+  if(class(v) != "numeric")
+    stop("Erro")
+  cont <- 0
   n <- length(v)
-  if( n == 0){
-    if( v[1] == 0){
-      cont <- cont + 1
-      return(cont)
-    }
-  return(cont)
-  }
-  vet <- v[2:n]
-  nulo <- nulos(vet)
-  if(vet[1] == 0){
-    cont <- cont + 1
+  if(v[1] == 0)
+    cont <- 1
+  if(n == 1)
     return(cont)
-    }
-  return(nulo)
+  vet <- v[2:n]
+  return(nulos(vet) + cont)
 }
 
-nulos(c(2,0,2,0))
+v <- c(2,0,2,0)
+  
+nulos(v)
 
 # Exercício 7.9
+
+ordeminversa <- function(v){
+  if(class(v) != "numeric")
+    stop("Erro")
+  n <- length(v)
+  if(n == 1)
+    return(v)
+  w <- v[1:(n-1)]
+  return(c(v[n], ordeminversa(w)))
+}
 
 # Exercício 7.10
 

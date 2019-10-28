@@ -185,7 +185,6 @@ ordbolharec1cont <- function(v){
   aux <- ordbolharec1cont(w)
   wo <- aux[[1]]
   a <- a + aux[[2]]
-  vo <- c(wo,v[n])
   return(a)
 }
 
@@ -290,4 +289,69 @@ ordbolharec1contv <- function(v){
   return(list(vo,a))
 }
 
+# Exercício 8.4
+
+## Letra a
+
+v1 <- c(10,9,8,7,6,5,4,3,2,1) 
+ordbolhareccontv(v1)
+
+## Letra b
+
+v2 <- c(1,3,5,5,4,0,-1,2,6,-2) 
+ordbolhareccontv(v2)
+
+## Letra c
+
+v3 <- c(2,0,4,6,8,10,12,14,16,18,20) 
+ordbolhareccontv(v3)
+
+## Letra d
+
+v4 <- c("fabio","ana","pedro","bruno","bruna","marco")
+ordbolhareccontv(v4)
+
+# Exercício 8.5
+
+novafuncao <- function(v){
+  if( !is.vector(v))
+    stop("O argumento de entrada precisa ser um vetor.")
+  n <- length(v)
+  for(j in 1: (n - 1)){         
+    for(i in 1: (n - j)){      
+      if(v[i] > v[i + 1]){
+        x11()
+        plot(v)
+        aux <- v[i]           
+        v[i] <- v[i + 1]
+        v[i + 1] <- aux
+      }
+    }
+  }
+  return(v)
+}
+
+v <- c(5,9,4,2,6,10,3,8,1,7)
+w <- novafuncao(v)
+plot(w)
+
+# Exercício 8.6
+
+ordbolhad <- function(v){
+  if( !is.vector(v))
+    stop("O argumento de entrada precisa ser um vetor.")
+  n <- length(v)
+  for(j in 1: (n - 1)){         # CondiÃ§Ã£o de parada foi dada
+    for(i in 1: (n - j)){      # CondiÃ§Ã£o de parada foi dada 
+      if(v[i] < v[i + 1]){
+        aux <- v[i]           # Trocando eles de posiÃ§Ã£o
+        v[i] <- v[i + 1]
+        v[i + 1] <- aux
+      }
+    }
+  }
+  return(v)
+}
+
+# Exercício 8.7 
 
