@@ -42,9 +42,8 @@ ordena(v)
 
 # Letra b
 
-ordenatroca <- function(v){
+ordenatroca <- function(v,  cont = 0){
   n <- length(v)
-  cont <- 0
   if(n == 1)
     return(list(v, cont))
   for(i in n:2){
