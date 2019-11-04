@@ -66,7 +66,7 @@ AproxExp(7.3,0.00000001)
 
 ## Letra c
 
-AproxExp <- function(x, incremento){
+AproxExpi <- function(x, incremento){
   fat <- 1
   aprox <- 1
   for(i in 1:10){
@@ -84,13 +84,33 @@ AproxExp <- function(x, incremento){
   }
 }
 
-AproxExp(1, 0.000000001)
+AproxExpi(1, 0.000000001)
 
-AproxExp(-1, 0.00000001)
+AproxExpi(-1, 0.00000001)
 
-AproxExp(3, 0.00000001)
+AproxExpi(3, 0.00000001)
 
-AproxExp(1^1/2, 0.0000000001)
+AproxExpi(1^1/2, 0.0000000001)
 
-AproxExp(7.3,0.00000001)
+AproxExpi(7.3,0.00000001)
 
+## Letra d
+
+AproxExpq <- function(x, incremento){
+  x <- -x^2 / 2
+  fat <- 1
+  aprox <- 1
+  for(i in 1:10){
+    fat <- fat * i
+    aprox <- aprox + x^i / fat
+  }
+  repeat{
+    i <-  i + 1
+    fat <- fat * i
+    parcela <- x^i / fat
+    if(abs(parcela) < incremento){
+      return(aprox + parcela)
+    }
+    aprox = aprox + parcela
+  }
+}
