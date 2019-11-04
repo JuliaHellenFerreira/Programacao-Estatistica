@@ -52,4 +52,45 @@ AproxExp <- function(x, incremento){
     }
 }
 
+## Letra b
+
+AproxExp(1, 0.000000001)
+
+AproxExp(-1, 0.00000001)
+
+AproxExp(3, 0.00000001)
+
+AproxExp(1^1/2, 0.0000000001)
+
+AproxExp(7.3,0.00000001)
+
+## Letra c
+
+AproxExp <- function(x, incremento){
+  fat <- 1
+  aprox <- 1
+  for(i in 1:10){
+    fat <- fat * i
+    aprox <- aprox + x^i / fat
+  }
+  repeat{
+    i <-  i + 1
+    fat <- fat * i
+    parcela <- x^i / fat
+    if(abs(parcela) < incremento){
+      return(list(aprox + parcela, i))
+    }
+    aprox = aprox + parcela
+  }
+}
+
+AproxExp(1, 0.000000001)
+
+AproxExp(-1, 0.00000001)
+
+AproxExp(3, 0.00000001)
+
+AproxExp(1^1/2, 0.0000000001)
+
+AproxExp(7.3,0.00000001)
 
