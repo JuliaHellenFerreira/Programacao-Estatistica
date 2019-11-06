@@ -176,35 +176,43 @@ ln(3.8,0.000001)
 
 ## Letra c
 
+baseln <- function(x,b, incremento = 0.0001){
+  lnx <- ln(x, incremento)
+  lnb <- ln(b, incremento)
+  return(lnx/lnb)
+}
+
+baseln(3,4)
+
 # Exercício 10.7
 
-sen <- function(x, incremento){
-  if(abs(x) > pi )
+sen <- function(x, incremento = 0.0001){
+  if(x > pi)
     return(sen(x - 2 * pi, incremento))
-  fat <- 1
-  aprox <- 0
+  if(x < pi)
+    return(sen(x + 2 * pi, incremento))
+  aprox <- x
   for(i in 1:10){
-    fat <- fat * i
-    aprox <- aprox + (x - x^i) / fat
-    i <- i + 1
+    parcela <- ((((-1)^i) * (x^(2*i)+1)))/factorial(2*i + 1)
+    aprox <- aprox + parcela
   }
+  i <- 11
   repeat{
-    i <- i + 1
-    fat <- (2*i + 1) * fat
-    parcela <- ((-1)^i * x^(2*i)+1)/fat
+    parcela <- ((-1)^i * x^(2*i)+1)/factorial(2*i + 1)
     if(abs(parcela) < incremento)
-      return(aprox + incremento)
+      return(aprox)
+    aprox <- aprox + parcela
+    i <- i + 1
   }
-  aprox <- aprox + parcela
 }
 
 
 ## Letra b
 
-sen(2,0.00001)
-sen(25,0.0001)
-sen(50,0,0001)
-sen (pi/3,0.0001)
+sen(1)
+sen(25)
+sen(50)
+sen (pi/3)
 
 sin(2)
 sin(25)
