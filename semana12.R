@@ -9,11 +9,9 @@
 ########## Função ##########
 
 f1 <- function(x){
-  resp <- 1 / (x^2 + 1)
-  return(resp)
+  resultado <- 1 / (x^2 + 1)
+  return(resultado)
 }
-
-## Letra a - Reais
 
 ## Letra b
 
@@ -70,9 +68,9 @@ DerivadaNumericaRec(1/3,f1)
 
 f2 <- function(x){
   if(x == -2 || x == -1 || x == 0 || x == 1)
-    return("Erro")
-  cont <- log(x^2 + x - 2)
-  return(cont)
+    stop("Erro")
+  resultado <- log(x^2 + x - 2)
+  return(resultado)
 }
 
 f2(2)
@@ -98,4 +96,17 @@ DerivadaNumericaRec1(3, f2)
 DerivadaNumericaRec1((-5/2),f2)
 DerivadaNumericaRec1(4/3,f2)
 
+# Exercício 12.5 
 
+########### Função ##############
+
+f3 <- function(x){
+  if(x == 0)
+    stop("Erro")
+  resultado <- (exp(-x/3)*(1 + (x/(x^2 + 1))) - 1)
+  return(resultado)
+}
+
+f3(0)
+
+## Letra a
