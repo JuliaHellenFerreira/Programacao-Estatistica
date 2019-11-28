@@ -220,8 +220,16 @@ sin (pi/3)
 
 ## Letra c
 
-cos <- function(x, incremento){
-  x <- x  + pi/2
+coseno <- function(x, incremento){
+  return(sen(x + pi/2))
+}
+
+coseno(5,0.00001)
+
+#################################### Não funciona #################################
+
+coseno1 <- function(x, incremento){  
+  x <- (x  + pi/2)
   if(abs(x) > pi )
     return(cos(x - 2 * pi, incremento))
   fat <- 1
@@ -239,5 +247,3 @@ cos <- function(x, incremento){
   }
   aprox <- aprox + parcela
 }
-
-cos(5,0.00001)
