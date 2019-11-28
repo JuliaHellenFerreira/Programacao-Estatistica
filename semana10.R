@@ -189,23 +189,22 @@ baseln(3,4)
 sen <- function(x, incremento = 0.0001){
   if(x > pi)
     return(sen(x - 2 * pi, incremento))
-  if(x < pi)
+  if(x < -pi)
     return(sen(x + 2 * pi, incremento))
   aprox <- x
   for(i in 1:10){
-    parcela <- ((((-1)^i) * (x^(2*i)+1)))/factorial(2*i + 1)
+    parcela <- (((-1)^i) * (x^(2*i+1)))/factorial(2*i + 1)
     aprox <- aprox + parcela
   }
   i <- 11
   repeat{
-    parcela <- ((-1)^i * x^(2*i)+1)/factorial(2*i + 1)
+    parcela <- (((-1)^i) * (x^(2*i+1)))/factorial(2*i + 1)
     if(abs(parcela) < incremento)
       return(aprox)
     aprox <- aprox + parcela
     i <- i + 1
   }
 }
-
 
 ## Letra b
 
